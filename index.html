@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free, simple online calculators and everyday utility tools. No signup required.">
+<title>SmartUtility — Free Online Tools</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="#home">✦ SmartUtility</a><nav><a href="#tools">Tools</a><a href="#about">About</a></nav></header>
+<main id="home">
+<section class="hero"><span class="eyebrow">FREE ONLINE TOOLS</span><h1>Small tools.<br><em>Big time savings.</em></h1><p>Useful everyday calculators and helpers — free to use, right in your browser.</p><a class="primary" href="#tools">Explore tools ↓</a></section>
+<section id="tools" class="tools-section"><div class="section-head"><div><span class="eyebrow">TOOLBOX</span><h2>What do you need today?</h2></div><input id="search" type="search" placeholder="Search tools…" aria-label="Search tools"></div>
+<div class="grid" id="toolGrid">
+<article class="card" data-name="percentage calculator math"><div class="ico">％</div><h3>Percentage calculator</h3><p>Find a percentage of any number.</p><label>What is <input id="pct" type="number" placeholder="20"> % of <input id="pctNum" type="number" placeholder="150">?</label><button onclick="percentage()">Calculate</button><output id="pctOut">Your answer appears here.</output></article>
+<article class="card" data-name="age calculator birthday"><div class="ico">🎂</div><h3>Age calculator</h3><p>Calculate age from your date of birth.</p><label>Date of birth <input id="dob" type="date"></label><button onclick="ageCalc()">Calculate age</button><output id="ageOut">Your age appears here.</output></article>
+<article class="card" data-name="emi loan calculator"><div class="ico">▤</div><h3>EMI calculator</h3><p>Estimate a monthly payment. This is a calculation, not a loan offer.</p><label>Loan amount <input id="principal" type="number" min="0" placeholder="100000"></label><label>Annual interest (%) <input id="rate" type="number" min="0" step="0.01" placeholder="12"></label><label>Term (months) <input id="months" type="number" min="1" placeholder="12"></label><button onclick="emiCalc()">Calculate EMI</button><output id="emiOut">Your estimate appears here.</output></article>
+<article class="card" data-name="word character counter text"><div class="ico">¶</div><h3>Word counter</h3><p>Count words, characters and spaces.</p><textarea id="wordText" rows="4" placeholder="Paste or type your text here…"></textarea><output id="wordOut">0 words · 0 characters</output></article>
+<article class="card" data-name="unit converter length"><div class="ico">↔</div><h3>Length converter</h3><p>Convert common length units.</p><label>Value <input id="unitVal" type="number" placeholder="1"></label><label>From <select id="unitFrom"><option value="m">Metres</option><option value="km">Kilometres</option><option value="cm">Centimetres</option><option value="mi">Miles</option><option value="ft">Feet</option></select></label><label>To <select id="unitTo"><option value="km">Kilometres</option><option value="m">Metres</option><option value="cm">Centimetres</option><option value="mi">Miles</option><option value="ft">Feet</option></select></label><button onclick="unitCalc()">Convert</button><output id="unitOut">Converted value appears here.</output></article>
+<article class="card" data-name="image resizer resize photo"><div class="ico">▧</div><h3>Image resizer</h3><p>Resize an image locally in your browser.</p><label>Choose image <input id="imageFile" type="file" accept="image/*"></label><label>Width (px) <input id="imgWidth" type="number" min="1" placeholder="800"></label><button onclick="resizeImage()">Resize & download</button><output id="imgOut">Your image stays on your device.</output></article>
+</div><p id="noResults" hidden>No matching tools found.</p></section>
+<section id="about" class="about"><span class="eyebrow">OUR PROMISE</span><h2>Useful. Simple. Free.</h2><p>SmartUtility is designed to make everyday tasks easier. The tools run in your browser; information you enter is not sent to a server by this website.</p><p class="small">Have an idea for a tool? Email: <a href="mailto:hello@example.com">hello@example.com</a> <span>(replace this with your own email before publishing)</span></p></section>
+</main><footer>© <span id="year"></span> SmartUtility. Made to be useful. <span>Privacy-friendly browser tools</span></footer>
+<script src="script.js"></script>
+</body></html>
